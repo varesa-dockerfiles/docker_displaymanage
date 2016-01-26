@@ -12,7 +12,6 @@ RUN useradd $USER
 ENV DIR=/$APP
 
 RUN mkdir $DIR && chown $USER:$USER $DIR
-RUN ls -lah /
 USER $USER
 
 RUN git clone https://github.com/varesa/displayManage.git $DIR
