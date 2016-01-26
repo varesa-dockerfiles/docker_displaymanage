@@ -25,4 +25,5 @@ USER $USER
 
 CMD ["pserve", "development.ini"]
 
-VOLUME $DIR
+VOLUME $DIR/data
+VOLUME $DIR/logs
