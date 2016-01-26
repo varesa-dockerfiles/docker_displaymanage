@@ -16,6 +16,7 @@ RUN ls -lah /
 USER $USER
 
 RUN git clone https://github.com/varesa/displayManage.git $DIR
+RUN git clone https://github.com/varesa/logviewer.git $DIR/app/static/logviewer
 
 WORKDIR /$DIR
 
