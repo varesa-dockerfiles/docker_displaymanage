@@ -8,14 +8,18 @@ EXPOSE 6543 22
 
 ENV APP=displaymanage
 ENV USER=$APP
-RUN useradd $USER
 ENV DIR=/$APP
 
+RUN useradd $USER
 RUN mkdir $DIR && chown $USER:$USER $DIR
+
 USER $USER
 
 RUN git clone https://github.com/varesa/displayManage.git $DIR
 RUN git clone https://github.com/varesa/logviewer.git $DIR/app/static/logviewer
+
+RUN mkdir $DIR/data
+RUN mkdir $DIR/logs
 
 WORKDIR /$DIR
 
