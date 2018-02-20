@@ -1,4 +1,4 @@
-FROM registry.esav.fi:5000/python3
+FROM registry.esav.fi/base/python3
 
 MAINTAINER Esa Varemo <esa@kuivanto.fi>
 
